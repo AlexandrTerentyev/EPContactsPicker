@@ -10,6 +10,7 @@ import UIKit
 import Contacts
 
 
+@available(iOS 9.0, *)
 public protocol EPPickerDelegate {
 	func epContactPicker(_: EPContactsPicker, didContactFetchFailed error: NSError)
     func epContactPicker(_: EPContactsPicker, didCancel error: NSError)
@@ -17,6 +18,7 @@ public protocol EPPickerDelegate {
 	func epContactPicker(_: EPContactsPicker, didSelectMultipleContacts contacts: [EPContact])
 }
 
+@available(iOS 9.0, *)
 public extension EPPickerDelegate {
 	func epContactPicker(_: EPContactsPicker, didContactFetchFailed error: NSError) { }
 	func epContactPicker(_: EPContactsPicker, didCancel error: NSError) { }
@@ -24,6 +26,7 @@ public extension EPPickerDelegate {
 	func epContactPicker(_: EPContactsPicker, didSelectMultipleContacts contacts: [EPContact]) { }
 }
 
+@available(iOS 9.0, *)
 typealias ContactsHandler = (_ contacts : [CNContact] , _ error : NSError?) -> Void
 
 public enum SubtitleCellValue{
@@ -33,6 +36,7 @@ public enum SubtitleCellValue{
     case organization
 }
 
+@available(iOS 9.0, *)
 open class EPContactsPicker: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     // MARK: - Properties

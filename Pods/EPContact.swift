@@ -9,6 +9,7 @@
 import UIKit
 import Contacts
 
+@available(iOS 9.0, *)
 open class EPContact {
     
     open var firstName: String
